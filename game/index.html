@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rogue Sensei · Pointerra</title><link rel="stylesheet" href="style.css">
+<script src="game.js" defer></script>
+</head>
+<body>
+<header><a class="brand" href="./">ROGUE SENSEI <span>OCHUVERSE</span></a><span class="edition">LOCAL ADVENTURE · EARLY PREVIEW</span></header>
+<main>
+<section class="scene" aria-label="Crash site in Pointerra">
+<div class="stars"></div><div class="moon"></div><div class="portal"></div><div class="ruins"></div>
+<div class="lamp" id="lamp"><div class="orb"></div><div class="stem"></div></div>
+<div class="scene-caption"><span>CHAPTER 01</span><h1>The world that forgot its way</h1><p>POINTERRA · THE FALLEN OBSERVATORY</p></div>
+<div class="scene-status" id="scene-status">BEACON OFFLINE</div>
+</section>
+<div class="workspace">
+<section class="panel story"><div class="eyebrow">FIELD JOURNAL <span id="progress">01 / 03</span></div><h2 id="story-title">A sky you do not remember</h2><div id="story-copy"></div><button id="continue">Inspect the beacon →</button><p class="save" id="save-status" role="status">Loading your journal…</p></section>
+<section class="panel mission"><div class="eyebrow">BEACON CONTROL <span>C / GCC</span></div><h2>Send energy to the right place</h2><p id="mission-copy">The beacon stores a charge. A pointer can tell your spell where to send energy.</p>
+<label for="code">Your spell · complete the function body</label><textarea id="code" spellcheck="false" aria-describedby="quest-goal"></textarea>
+<p class="goal" id="quest-goal">Increase the original charge by 20. Keep it working for different starting values.</p>
+<div class="actions"><button id="run">Cast spell ▶</button><button class="secondary" id="hint">Need a hint?</button></div><p id="hint-copy" hidden>The pointer stores the beacon’s address. <code>*target</code> accesses the integer at that address. Reading and writing <code>target</code> itself changes the address, rather than the charge.</p>
+<pre id="output" role="status" aria-live="polite">Inspect the beacon to unlock its console.</pre>
+</section>
+<section class="panel memory"><div class="eyebrow">MEMORY LENS <span>LIVE C TRACE</span></div><h2>Follow the address</h2><p>The lens shows actual addresses from your latest run. They can change each time.</p><div id="memory-view"><div class="memory-empty">Awaiting a spell.<br>The beacon is still dark.</div></div><p class="fine">The address of a pointer is different from the address stored inside it. The function receives a copy of the caller’s pointer.</p></section>
+</div>
+<footer>Intuition first. Then theory. Then code. <button id="reset" class="text-button">Restart this preview</button></footer>
+</main>
+</body></html>
